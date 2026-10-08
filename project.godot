@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 GUIDE="*uid://p2jwrgjcbexr"
 Console="*uid://ouiu5xh1cs8n"
 SyncManager="*uid://dpiim8is0veq7"
+SyncDebugger="*uid://b5o4o7egu3y8s"
 
 [display]
 
