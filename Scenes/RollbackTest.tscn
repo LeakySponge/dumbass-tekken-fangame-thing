@@ -50,5 +50,26 @@ offset_top = -1.0
 offset_right = 4.0
 offset_bottom = 11.551994
 
+[node name="ResetButton" type="Button" parent="CanvasLayer" unique_id=410501903]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -8.0
+offset_top = -8.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "RESET"
+
+[node name="SyncLostLabel" type="Label" parent="CanvasLayer" unique_id=1677241826]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -1.0
+offset_bottom = 23.0
+grow_horizontal = 0
+
 [connection signal="pressed" from="CanvasLayer/ConnectionPanel/GridContainer/ServerButton" to="." method="_on_server_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ConnectionPanel/GridContainer/CilentButton" to="." method="_on_cilent_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ResetButton" to="." method="_on_button_pressed"]
