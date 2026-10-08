@@ -1,3 +1,35 @@
 [gd_scene format=3 uid="uid://cuua63s7bo2x5"]
 
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_k21up"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_blasw"]
+
 [node name="Main" type="Node3D" unique_id=207091040]
+
+[node name="Testy" type="CharacterBody3D" parent="." unique_id=199694198]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Testy" unique_id=1494851502]
+mesh = SubResource("CapsuleMesh_k21up")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Testy" unique_id=552327022]
+shape = SubResource("CapsuleShape3D_blasw")
+
+[node name="Testy2" type="CharacterBody3D" parent="." unique_id=414847902]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.706777, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Testy2" unique_id=540763995]
+mesh = SubResource("CapsuleMesh_k21up")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Testy2" unique_id=1473250197]
+shape = SubResource("CapsuleShape3D_blasw")
+
+[node name="StgTest" type="Node3D" parent="." unique_id=77628444]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="StgTest" unique_id=1549838630]
+size = Vector3(10, 1, 10)
+
+[node name="CameraRig" type="Node3D" parent="." unique_id=2129931898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.6069255)
+
+[node name="Camera3D" type="Camera3D" parent="CameraRig" unique_id=1918306336]
