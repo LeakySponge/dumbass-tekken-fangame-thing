@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://b5u4h6eln4184"]
+
+[ext_resource type="Script" uid="uid://cn2qtf2s8da7k" path="res://Scenes/rollbackTestMainScript.gd" id="1_ctppd"]
+
+[node name="RollbackTest" type="Node2D" unique_id=681955589]
+script = ExtResource("1_ctppd")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=600210206]
+
+[node name="ConnectionPanel" type="PanelContainer" parent="CanvasLayer" unique_id=910742806]
+offset_left = 403.0
+offset_top = 204.0
+offset_right = 686.0
+offset_bottom = 363.0
+
+[node name="GridContainer" type="GridContainer" parent="CanvasLayer/ConnectionPanel" unique_id=169397690]
+layout_mode = 2
+columns = 2
+
+[node name="HostLabel" type="Label" parent="CanvasLayer/ConnectionPanel/GridContainer" unique_id=296393245]
+layout_mode = 2
+text = "Host:"
+
+[node name="HostField" type="LineEdit" parent="CanvasLayer/ConnectionPanel/GridContainer" unique_id=899613381]
+layout_mode = 2
+placeholder_text = "127.0.0.1"
+
+[node name="PortLabel" type="Label" parent="CanvasLayer/ConnectionPanel/GridContainer" unique_id=1793882108]
+layout_mode = 2
+text = "Port:"
+
+[node name="PortField" type="LineEdit" parent="CanvasLayer/ConnectionPanel/GridContainer" unique_id=1288082359]
+layout_mode = 2
+placeholder_text = "9999"
+
+[node name="ServerButton" type="Button" parent="CanvasLayer/ConnectionPanel/GridContainer" unique_id=262556320]
+layout_mode = 2
+text = "Server"
+
+[node name="CilentButton" type="Button" parent="CanvasLayer/ConnectionPanel/GridContainer" unique_id=1798831997]
+layout_mode = 2
+text = "Cilent"
+
+[node name="MessageLabel" type="Label" parent="CanvasLayer" unique_id=208693504]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.101
+offset_left = 403.0
+offset_top = 272.0
+offset_right = -466.0
+offset_bottom = 229.552
+
+[connection signal="pressed" from="CanvasLayer/ConnectionPanel/GridContainer/ServerButton" to="." method="_on_server_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/ConnectionPanel/GridContainer/CilentButton" to="." method="_on_cilent_button_pressed"]
