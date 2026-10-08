@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://b5u4h6eln4184"]
 
 [ext_resource type="Script" uid="uid://cn2qtf2s8da7k" path="res://Scenes/rollbackTestMainScript.gd" id="1_ctppd"]
+[ext_resource type="PackedScene" uid="uid://crlbmlsee2ep1" path="res://Scenes/player.tscn" id="2_ywmfa"]
 
 [node name="RollbackTest" type="Node2D" unique_id=681955589]
 script = ExtResource("1_ctppd")
@@ -69,6 +70,10 @@ anchor_right = 1.0
 offset_left = -1.0
 offset_bottom = 23.0
 grow_horizontal = 0
+
+[node name="ServerPlayer" parent="." unique_id=410135109 instance=ExtResource("2_ywmfa")]
+
+[node name="CilentPlayer" parent="." unique_id=1435903387 instance=ExtResource("2_ywmfa")]
 
 [connection signal="pressed" from="CanvasLayer/ConnectionPanel/GridContainer/ServerButton" to="." method="_on_server_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ConnectionPanel/GridContainer/CilentButton" to="." method="_on_cilent_button_pressed"]

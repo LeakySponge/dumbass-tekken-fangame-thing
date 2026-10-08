@@ -37,6 +37,13 @@ func _on_network_peer_connected(peer_id: int):
 	message_label.text = "Connected!"
 	SyncManager.add_peer(peer_id)
 	
+	$ServerPlayer.set_multiplayer_authority(1)
+	if multiplayer.is_server():
+		$CilentPlayer.set_multiplayer_authority(peer_id)
+	else:
+		$CilentPlayer.set_multiplayer_authority(multiplayer.get_unique_id())
+	
+	
 	if multiplayer.is_server():
 		message_label.text = "Starting..."
 		# ping test
