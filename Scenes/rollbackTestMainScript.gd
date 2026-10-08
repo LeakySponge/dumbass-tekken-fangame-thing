@@ -61,9 +61,11 @@ func _on_server_disconnected() -> void:
 func _on_button_pressed() -> void:
 	SyncManager.stop()
 	SyncManager.clear_peers()
-	var peer = get_tree().network_peer
-	if peer:
-		peer.close_connection()
+	var peer = multiplayer.multiplayer_peer
+	if peer and not peer is OfflineMultiplayerPeer:
+		peer.close()
+	
+	multiplayer.multiplayer_peer = null
 	get_tree().reload_current_scene()
 
 func _on_SyncManager_sync_started() -> void:
