@@ -23,7 +23,7 @@ text = "Host:"
 
 [node name="HostField" type="LineEdit" parent="CanvasLayer/ConnectionPanel/GridContainer" unique_id=899613381]
 layout_mode = 2
-placeholder_text = "127.0.0.1"
+text = "127.0.0.1"
 
 [node name="PortLabel" type="Label" parent="CanvasLayer/ConnectionPanel/GridContainer" unique_id=1793882108]
 layout_mode = 2
@@ -31,7 +31,7 @@ text = "Port:"
 
 [node name="PortField" type="LineEdit" parent="CanvasLayer/ConnectionPanel/GridContainer" unique_id=1288082359]
 layout_mode = 2
-placeholder_text = "9999"
+text = "9999"
 
 [node name="ServerButton" type="Button" parent="CanvasLayer/ConnectionPanel/GridContainer" unique_id=262556320]
 layout_mode = 2
@@ -45,10 +45,10 @@ text = "Cilent"
 anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 0.101
-offset_left = 403.0
-offset_top = 272.0
-offset_right = -466.0
-offset_bottom = 229.552
+offset_left = 7.0
+offset_top = -1.0
+offset_right = 4.0
+offset_bottom = 11.551994
 
 [connection signal="pressed" from="CanvasLayer/ConnectionPanel/GridContainer/ServerButton" to="." method="_on_server_button_pressed"]
 [connection signal="pressed" from="CanvasLayer/ConnectionPanel/GridContainer/CilentButton" to="." method="_on_cilent_button_pressed"]
